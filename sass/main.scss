@@ -426,15 +426,25 @@ splide {
 
 .case-show {
 	width: 1200px;
+	max-width: 100%;
 	margin: 0 auto;
 
 	.wrap {
-		padding: 90px;
+		padding: clamp(40px, 7.5vw, 90px);
 		background: #fff;
 	}
 
 	.red-dot li+li {
 		margin-top: 16px;
+	}
+
+	.pl-md-5 {
+
+		@include mobile-xl {
+			margin-top: 30px;
+			padding: 30px !important;
+			background-color: #f5f5f5;
+		}
 	}
 
 	.mfp-close {
@@ -445,6 +455,10 @@ splide {
 		background: $primary2;
 		opacity: 1;
 		transition: ease .4s;
+		@include mobile-xl {
+			width: 40px;
+			height: 40px;
+		}
 		&::before,
 		&::after {
 			content: "";
@@ -454,6 +468,9 @@ splide {
 			position: absolute;
 			top: 50%;
 			left: 50%;
+			@include mobile-xl {
+				height: 20px;
+			}
 		}
 		&::before {
 			transform: translate(-50%, -50%) rotate(45deg);
@@ -568,10 +585,6 @@ splide {
 
 	h2 {
 		margin-bottom: 28px;
-
-		// @include tablet {
-		// 	margin-bottom: 10px;
-		// }
 	}
 }
 

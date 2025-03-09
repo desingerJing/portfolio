@@ -2622,6 +2622,7 @@ h3 span {
 h2 {
   font-size: clamp(28px, 3vw, 36px);
   font-weight: 500;
+  margin-bottom: clamp(18px, 2.3vw, 28px);
 }
 h2.title-line {
   padding-bottom: 20px;
@@ -2666,22 +2667,10 @@ ul.red-dot {
   list-style: none;
   padding-left: 0;
   margin-bottom: 0;
-  margin-top: -4px;
-}
-@media (max-width: 767px) {
-  ul.red-dot {
-    margin-top: -15px;
-  }
 }
 ul.red-dot > li {
   padding-left: 16px;
-  margin-top: 4px;
   position: relative;
-}
-@media (max-width: 767px) {
-  ul.red-dot > li {
-    margin-top: 15px;
-  }
 }
 ul.red-dot > li::before {
   content: "";
@@ -2692,6 +2681,9 @@ ul.red-dot > li::before {
   position: absolute;
   top: 10px;
   left: 0;
+}
+ul.red-dot > li + li {
+  margin-top: 4px;
 }
 ul.red-dot.text-center > li {
   padding-left: 0;
@@ -2974,6 +2966,11 @@ splide {
   margin-top: 16px;
 }
 @media (max-width: 767px) {
+  .case-show .red-dot li + li {
+    margin-top: 10px;
+  }
+}
+@media (max-width: 767px) {
   .case-show .pl-md-5 {
     margin-top: 30px;
     padding: 30px !important;
@@ -3033,11 +3030,6 @@ splide {
     margin: 0;
   }
 }
-@media (max-width: 991px) {
-  .about .col {
-    width: 100%;
-  }
-}
 
 .about-img {
   position: relative;
@@ -3094,6 +3086,16 @@ splide {
     margin-top: clamp(30px, 4.16vw, 50px);
   }
 }
+@media (max-width: 767px) {
+  .about-description .col + .col {
+    margin-top: 0;
+  }
+}
+@media (max-width: 577px) {
+  .about-description .col + .col {
+    margin-top: clamp(30px, 4.16vw, 50px);
+  }
+}
 .about-description.description-bg {
   position: relative;
   overflow: visible;
@@ -3133,9 +3135,6 @@ splide {
 }
 .about-description ul + h4 {
   margin-top: clamp(30px, 4.16vw, 50px);
-}
-.about-description h2 {
-  margin-bottom: 28px;
 }
 
 footer {

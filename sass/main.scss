@@ -95,6 +95,7 @@ h3 {
 h2 {
 	font-size: clamp(28px, 3vw, 36px);
 	font-weight: 500;
+	margin-bottom: clamp(18px, 2.3vw, 28px);
 
 	&.title-line {
 		padding-bottom: 20px;
@@ -134,17 +135,10 @@ ul.red-dot {
 	list-style: none;
 	padding-left: 0;
 	margin-bottom: 0;
-	margin-top: -4px;
-	@include mobile-xl {
-		margin-top: -15px;
-	}
 	> li {
 		padding-left: 16px;
-		margin-top: 4px;
 		position: relative;
-		@include mobile-xl {
-			margin-top: 15px;
-		}
+		
 		&::before {
 			content: "";
 			display: inline-block;
@@ -155,6 +149,10 @@ ul.red-dot {
 			position: absolute;
 			top: 10px;
 			left: 0;
+		}
+
+		+li {
+			margin-top: 4px;
 		}
 	}
 
@@ -433,6 +431,9 @@ splide {
 
 	.red-dot li+li {
 		margin-top: 16px;
+		@include mobile-xl {
+			margin-top: 10px;
+		}
 	}
 
 	.pl-md-5 {
@@ -489,13 +490,6 @@ splide {
 	@include mobile-xl {
 		margin: 0;
 	}
-
-	.col {
-
-		@include tablet {
-			width: 100%;
-		}
-	}
 }
 
 
@@ -545,6 +539,14 @@ splide {
 		@include tablet {
 			margin-top: clamp(30px, 4.16vw, 50px);
 		}
+
+		@include mobile-xl {
+			margin-top: 0;
+		}
+
+		@media (max-width: 577px) {
+			margin-top: clamp(30px, 4.16vw, 50px);
+		} 
 	}
 
 	&.description-bg {
@@ -578,10 +580,6 @@ splide {
 
 	ul+h4 {
 		margin-top: clamp(30px, 4.16vw, 50px);
-	}
-
-	h2 {
-		margin-bottom: 28px;
 	}
 }
 

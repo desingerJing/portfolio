@@ -3160,11 +3160,6 @@ footer {
     font-size: 14px;
   }
 }
-@media (max-width: 600px) {
-  .footer-bottom {
-    display: block;
-  }
-}
 .footer-bottom a {
   color: #7D7D7D;
   font-size: 16px;

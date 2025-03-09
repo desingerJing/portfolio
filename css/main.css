@@ -2790,6 +2790,11 @@ ul.red-dot.text-center > li::before {
 .leave_top .logo {
   width: 90px;
 }
+@media (max-width: 767px) {
+  .leave_top .logo {
+    width: 70px;
+  }
+}
 .leave_top .main-menu ul {
   margin-top: 5px;
 }

@@ -259,6 +259,9 @@ ul.red-dot {
 	}
 	.logo {
 		width: 90px;
+		@include mobile-xl {
+			width: 70px;
+		}
 	}
 
 	.main-menu ul {

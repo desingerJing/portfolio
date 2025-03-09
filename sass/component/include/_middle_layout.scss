@@ -1,0 +1,101 @@
+.b-aside {
+    width: var(--aside-width);
+
+    .b-aside__title {
+        font-size: var(--b-aside-title);
+        color: $aside-header-color;
+        margin: 0 0 var(--b-aside-margin);
+        text-transform: capitalize;
+    }
+
+}
+
+.b-aside__items,
+.b-aside__items[type=mobileMenu] {
+    .b-aside__item {
+        .b-aside__link {
+            padding: var(--b-aside-padding) 0;
+            font-size: $aside-menu-size;
+            color: $aside-menu-link;
+            display: block;
+            border-bottom: 1px solid $line-light;
+
+            &:hover {
+                color: $aside-menu-hover;
+            }
+        }
+    }
+
+    .b-aside__item.is-active {
+        .b-aside__link {
+            color: $aside-menu-hover;
+        }
+    }
+
+    .b-aside-sub__item {
+        .b-aside-sub__link {
+            padding: var(--b-aside-padding);
+            font-size: $aside-menu-size - 1;
+            color: lighten($aside-menu-link, 15%);
+
+            &:before {
+                left: 10px;
+                top: 17px;
+            }
+
+            &:hover {
+                color: lighten($aside-menu-hover, 15%);
+            }
+        }
+    }
+
+    .b-aside-sub__item.is-active {
+        .b-aside-sub__link {
+            color: lighten($aside-menu-hover, 15%);
+        }
+    }
+
+    .b-aside__qty,
+    .b-aside-sub__qty {
+        font-size: small;
+    }
+}
+
+.arrilot-widget-container {
+    &+.b-main {
+        width: calc(100% - var(--aside-width));
+
+        @include tablet {
+            width: 100%;
+        }
+    }
+
+}
+
+.b-main,
+.b-index-main {
+    width: 100%;
+}
+
+
+.b-page__title {
+    font-size: var(--header-title);
+    font-weight: bold;
+    margin: 0 0 var(--header-title-margin);
+    padding: var(--header-title-padding);
+    line-height: var(--header-title-line-height);
+    color: $header-color;
+}
+
+.b-page__sub-title {
+    font-size: var(--sub-header-title);
+    margin: 0 0 var(--sub-header-title-margin);
+    padding: var(--sub-header-title-padding);
+    line-height: var(--sub-header-title-line-height);
+    color: $sub-header-color;
+}
+
+
+.b-nopadding {
+    padding: 0;
+}

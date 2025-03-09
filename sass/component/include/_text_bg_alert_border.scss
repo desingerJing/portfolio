@@ -1,0 +1,147 @@
+.text {
+  &-primary {
+    color: $primary;
+  }
+
+  &-secondary {
+    color: $secondary;
+  }
+
+  &-success {
+    color: $success !important;
+  }
+
+  &-danger {
+    color: $danger !important;
+  }
+
+  &-warning {
+    color: $warning !important;
+  }
+
+  &-info {
+    color: $info !important;
+  }
+
+  &-dark {
+    color: $dark !important;
+  }
+
+  &-white {
+    color: #fff;
+  }
+}
+
+.bg {
+  &-primary {
+    background: lighten($primary, 20%) !important;
+  }
+
+  &-secondary {
+    background: lighten($secondary, 20%) !important;
+  }
+
+  &-success {
+    background: #f0f0f0 !important;
+  }
+
+  &-danger {
+    background: lighten($danger, 20%) !important;
+  }
+
+  &-warning {
+    background: lighten($warning, 20%) !important;
+  }
+
+  &-info {
+    background: lighten($info, 20%) !important;
+  }
+
+  &-dark {
+    background: $dark !important;
+  }
+
+  &-light {
+    background: $light !important;
+  }
+
+  &-white {
+    background: #fff !important;
+  }
+}
+
+.alert {
+  border-radius: $alert-border-radius;
+  border: $alert-border-width solid transparent;
+  margin-bottom: 20px;
+
+  &-primary {
+    background: $primary !important;
+  }
+
+  &-secondary {
+    background: $secondary !important;
+  }
+
+  &-success {
+    background: #f7f7f7 !important;
+    color: #777 !important;
+    border: 1px solid #eaeaea !important;
+  }
+
+  &-danger {
+    background: $danger !important;
+  }
+
+  &-warning {
+    background: $warning !important;
+  }
+
+  &-info {
+    background: lighten($info, 50%) !important;
+    color: $info !important;
+    border-color: lighten($info, 45%) !important;
+  }
+
+  &-dark {
+    background: $dark !important;
+  }
+
+  &-white {
+    background: #fff;
+  }
+}
+
+.border {
+  &-primary {
+    border-color: $primary !important;
+  }
+
+  &-secondary {
+    border-color: $secondary !important;
+  }
+
+  &-success {
+    border-color: $success !important;
+  }
+
+  &-danger {
+    border-color: $danger !important;
+  }
+
+  &-warning {
+    border-color: $warning !important;
+  }
+
+  &-info {
+    border-color: $info !important;
+  }
+
+  &-dark {
+    border-color: $dark !important;
+  }
+
+  &-white {
+    border-color: #fff;
+  }
+}

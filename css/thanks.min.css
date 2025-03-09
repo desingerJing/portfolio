@@ -1,0 +1,180 @@
+@import url('https://cdnresource.gtmc.app/gtfonts/Urbanist/font-face.css');
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    overflow-x: hidden;
+    width: 100%;
+}
+
+body {
+    overflow-x: hidden;
+    width: 100%;
+    font-family: Urbanist, "微軟正黑體", "Microsoft JhengHei", \5FAE\8EDF\6B63\9ED1\9AD4, "微软雅黑", "Arial", sans-serif;
+    font-size: 18px;
+    line-height: 1.6;
+}
+
+img {
+    max-width: 100%
+}
+
+p {
+    line-height: 1.75
+}
+
+a {
+    color: #AD0101;
+    text-decoration: none;
+}
+
+a:hover {
+    color: #fff;
+    text-decoration: none;
+}
+
+.text-primary {
+    color: #fed136 !important
+}
+
+:focus {
+    outline: 0
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-weight: 700;
+}
+
+h6 {
+    font-size: 24px
+}
+
+.wrap {
+    max-width: 1440px;
+    padding: 0 20px;
+    margin: 0 auto;
+}
+
+
+
+.thanks-01 {
+    display: block;
+    border-style: solid;
+    border-width: 1px;
+    border-color: #ced4da;
+    padding: 100px 10px;
+    margin: 100px 10%;
+    text-align: center;
+}
+
+.thanks-02 {
+    text-align: left;
+    display: inline-block;
+    vertical-align: top;
+}
+
+.thanks-03 {
+    text-align: center;
+}
+
+.logo {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.logo img {
+    width: 60%;
+}
+
+.text-muted {
+    line-height: 160%;
+    margin: 10px;
+    text-align: center;
+    color: #000 !important;
+}
+
+.pword {
+    text-align: center;
+}
+
+.btn:not(:disabled):not(.disabled) {
+    cursor: pointer;
+}
+
+.btn {
+    font-size:18px;
+    padding: 5px 25px;
+    border-radius: 50px;
+    border: 1px solid transparent;
+    text-align: center;
+    display: inline-block;
+    line-height: 1.5;
+}
+
+.btn-primary {
+    background-color: #AD0101;
+    border-color: #AD0101;
+    color: #fff;
+}
+
+.btn-primary:hover,
+.btn-primary.hover,
+.btn-primary:focus,
+.btn-primary:active,
+.btn-primary.active,
+.show>.dropdown-toggle.btn-primary,
+.btn-primary:not(:disabled):not(.disabled).active,
+.btn-primary:not(:disabled):not(.disabled):active,
+.btn-primary:not(:disabled):not(.disabled):active:focus,
+.show>.btn-primary.dropdown-toggle {
+    background-color: transparent;
+    border-color: #AD0101;
+    color: #AD0101;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+}
+
+.btn-primary.disabled,
+.btn-primary[disabled],
+fieldset[disabled] .btn-primary,
+.btn-primary.disabled:hover,
+.btn-primary[disabled]:hover,
+fieldset[disabled] .btn-primary:hover,
+.btn-primary.disabled.hover,
+.btn-primary[disabled].hover,
+fieldset[disabled] .btn-primary.hover,
+.btn-primary.disabled:focus,
+.btn-primary[disabled]:focus,
+fieldset[disabled] .btn-primary:focus,
+.btn-primary.disabled:active,
+.btn-primary[disabled]:active,
+fieldset[disabled] .btn-primary:active,
+.btn-primary.disabled.active,
+.btn-primary[disabled].active,
+fieldset[disabled] .btn-primary.active {
+    background-color: rgba(173, 1, 1, 0.6);
+    border-color: rgba(173, 1, 1, 0.6);
+    color: #fff;
+}
+
+button {
+    background-color: transparent;
+    border: none;
+}
+
+@media (max-width:380px) {
+    .text-muted {
+        font-size: 20px;
+    }
+
+    .pword {
+        font-size: 14px;
+    }
+}

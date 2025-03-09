@@ -1,0 +1,177 @@
+.form-control,
+input:not(.form-check-input),
+input.form-control {
+  height: var(--input-height);
+  border: 1px solid $input-color;
+  padding: var(--input-padding-tb) var(--input-padding-lr);
+  border-radius: var(--input-radius);
+  @include main-size;
+
+  &::placeholder {
+    color: $input-placeholder;
+  }
+}
+
+.form-control:focus {
+  // color: #495057;
+  // background-color: #fff;
+  // border-color: #80bdff;
+  // outline: 0;
+  // box-shadow: 0 0 0 0.2rem rgb(0 123 255 / 25%);
+  //以上為預設值
+  border-color: $input-focus-color;
+  box-shadow: none;
+}
+
+
+
+.form-group {
+  position: relative;
+}
+
+.b-submit {
+  text-align: center;
+}
+
+
+.b-form__inline-style {
+  label {
+    margin-bottom: 0;
+
+    @include mobile-xl {
+      margin-bottom: .5rem
+    }
+  }
+
+  .b-field>.form-group {
+    display: flex;
+    position: relative;
+    margin-bottom: 50px;
+    align-items: center;
+
+    @include mobile-xl {
+      display: block;
+    }
+  }
+
+  .form-group>.b-form__label {
+    width: var(--inline-label-width);
+
+  }
+
+  .form-group>.input-group {
+    width: calc(100% - var(--inline-label-width));
+
+    @include mobile-xl {
+      width: 100%;
+    }
+  }
+
+  .form-group>.help-block.with-errors {
+    position: absolute;
+    top: calc(100% + 5px);
+    left: calc(var(--inline-label-width) + 15px);
+    right: 15px;
+
+    @include mobile-xl {
+      left: 15px;
+    }
+  }
+
+  .input-group {
+    width: auto;
+  }
+}
+
+//awselect select
+.awselect {
+  .front_face {
+    padding: 0;
+    padding: var(--input-padding-tb) var(--input-padding-lr);
+    height: var(--input-height);
+    max-height: 250px;
+    overflow-y: auto;
+  }
+
+  .front_face>.bg {
+    height: var(--input-height);
+    border: 1px solid $input-color;
+    padding: var(--input-padding-tb) var(--input-padding-lr);
+    border-radius: var(--input-radius);
+    background: #fff;
+  }
+
+  .front_face .content {
+    height: 100%;
+  }
+
+  ul li a {
+    padding: 10px 15px;
+
+  }
+
+  span.placeholder,
+  span.current_value {
+    display: block;
+    height: 100%;
+  }
+
+  >.bg {
+    border: 1px solid transparent;
+    display: none;
+  }
+
+  .back_face {
+    transform: translateY(0px);
+  }
+
+  &.animate2>.bg {
+    border: 1px solid $input-color;
+    border-radius: 0 0 var(--input-radius) var(--input-radius);
+    display: block;
+    @include fadeIn
+  }
+
+  &.animate2 .back_face {
+    @include fadeIn
+  }
+}
+
+.pretty {
+  .state label {
+    &:before {
+      border-color: $input-color !important;
+    }
+  }
+
+  input:checked~.state {
+    .icon {
+      opacity: 1;
+      font-size: 15px;
+      color: $input-focus-color;
+    }
+
+    label:before {
+      border-color: $input-focus-color !important;
+    }
+
+  }
+
+  &.p-default {
+    input:checked~.state {
+      label:after {
+        background-color: $input-focus-color !important;
+      }
+    }
+  }
+}
+
+
+.form-radio-label+.form-radio-label-info,
+.form-check-label+.form-check-label-info {
+  margin-left: 5px;
+}
+
+.form-check .state {
+  margin-bottom: 5px;
+}

@@ -1,0 +1,55 @@
+.b-filter {
+    padding-top: 15px;
+    margin-bottom: 15px;
+
+    .b-filter__items {
+        @include clearul;
+    }
+
+    .row.b-filter__items {
+        margin-right: -15px;
+        margin-left: -15px;
+    }
+
+    .b-filter__item {
+        position: relative;
+
+        &.col {
+            margin-bottom: 15px;
+        }
+    }
+
+    .b-filter__link {
+        display: flex;
+    }
+
+    .b-filter__dropdown-menu {
+        width: 100%;
+        border-radius: 0;
+    }
+
+}
+
+.show .b-filter__link,
+.b-filter__link {
+    .b-menu__arrow {
+        margin: 0 0 0 auto;
+    }
+}
+
+
+//b-checkbox組件
+.b-checkbox {
+    .b-checkbox__items {
+        @include clearul;
+    }
+
+    .b-checkbox__item {
+        padding: 0 20px;
+
+        &:hover {
+            background: #dcdcdc;
+        }
+
+    }
+}

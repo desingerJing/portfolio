@@ -1,0 +1,242 @@
+// Variables
+//
+// Variables should follow the `$component-state-property-size` formula for
+// consistent naming. Ex: $nav-link-disabled-color and $modal-content-box-shadow-xs.
+
+// Color system
+$default: #D8D8D8;
+$primary: #c40b0b;
+$primary2 : #3A3A3A;
+$secondary: #F2F2F2;
+$success: #2074ae;
+$info: #868784;
+$warning: darken($primary, 20%);
+$danger: #E10000;
+$base:#292828; // 自行使用, 目前沒有定義
+$light: #f5f5f5; //.bg-light, .text-light, 使用於 .non-result-wrap .b-page_nodata | component/include/_text_bg_aleart.scss
+$dark: #5a5a5a; //.text-light, .text-dark, 使用於 .non-result-wrap .b-page_nodata | component/include/_text_bg_aleart.scss
+
+
+//全站內文配色與文字尺寸
+$main-size: 18px; // Rwd 於 include/_mixin.scss 調整 
+$main-color:#2A2A2A; //body all font-color
+
+
+//全站內文連結 
+$link-color: #AD0101; // 引用 _normal.scss a link , 
+$hover-color: darken($link-color, 15%); // 引用 _normal.scss a:hover
+
+
+//aleart
+$swal2-confirm-button-background-color: #3d3d3d; // ok 按鈕
+$swal2-title-font-size: var(--title); //aleart 標題文字
+
+
+//手機版選配色  
+// 使用於 _normal.scss 手機版選單
+$mobile-menu-bg: #EFEFEF;
+$mobile-color: #727171;
+$mobile-menu-link-color: #727171;
+$mobile-menu-hover-color: #006243;
+$mobile-menu-line-color: #D9D9D9;
+$mobile-menu-openmenu-color: #808080;
+$mobile-submenu-bg: #EFEFEF;
+$mobile-submenu-link-color: #606060;
+$mobile-submenu-hover-color: #006243;
+$mobile-submenu-line-color: rgba(#d6d6d6, 0);
+$mobile-submenu-openmenu-color: #808080;
+
+
+//線條
+$line-light:#e5e5e5; // 使用於 _normal.scss ,產品詢價外跳樣式 、比較表 
+$line-dark: #626262; //目前沒有引用
+
+
+//topnav 文字大小與配色
+$topnav-size:18px;
+$topnav-link:#727171;
+$topnav-hover:#006243;
+
+
+//main-menu 文字大小與配色
+$main-menu-size:18px; // 引用 include/_mixin.scss 寫了rwd 
+$main-menu-link:#727171;
+$main-menu-hover:#006243;
+
+
+//主選單下拉選單  引用 component/include/_header.scss
+/*目前隱藏 有需要請到 上面路徑打開  打開註解 */
+$main-menu-dropdown-menu-bg:#ffffff;
+$main-menu-dropdown-menu-link:#050505;
+$main-menu-dropdown-menu-hover:#525253;
+
+
+/*共用下拉選單*/
+$dropdown-menu-size: 16px;
+$dropdown-menu-color: $main-color;
+$dropdown-menu-color-hover: $primary;
+$dropdown-menu-bg: #fff; // 引用於 
+$dropdown-menu-bg-hover: #f8f8f8; // 引用於 
+$dropdown-menu-border-color:#ccc;
+
+
+//sub-main-menu 文字大小與配色
+$sub-main-menu-size:17px;
+$sub-main-menu-link:#727171;
+$sub-main-menu-hover: #006243;
+
+
+//會員選單 文字大小與配色 
+//component/include/_header.scss  header 會員
+/*目前共用 dropdown-menu 到 上方路徑打開 打開註解*/
+$member-menu-size:16px;
+$member-menu-link:#616161;
+$member-menu-hover: #252525;
+
+
+//lang 語系 component/include/_header.scss  
+/*目前共用 dropdown-menu 到 上方路徑打開 打開註解*/
+$lang-menu-size:16px;
+$lang-menu-link:#616161;
+$lang-menu-hover: #252525;
+
+
+/*.b-article__title-link, .b-page__title | component/include/_card_item_article.scss
+  .b-page__title | component/include/_moddle_layout.scss
+*/
+$header-color:#2A2A2A; // 主標題
+
+
+/*.b-article__sub-title | component/include/_card_item_article.scss
+  .b-page__sub-title | component/include/_moddle_layout.scss
+  .b-product-detailed__title, .b-location__name-header, .b-search-result__title | include/_normal.scss
+*/
+$sub-header-color: #2A2A2A; //副標題(主標題下)
+
+
+//.b-card__title, .b-card__title-link | component/include/_card_item_article.scss
+$title-color: #AD0101; //card ,列表標題
+$title-color-hover: $primary; //card ,列表標題
+
+
+//.b-card__sub-title, .b-card__sub-title-link | component/include/_card_item_article.scss
+$sub-title-color: #AD0101; //card ,列表副標題
+$sub-title-color-hover: $primary; //card ,次標題
+
+
+//側選單 .b-aside | component/include/_moddle_layout.scss
+$aside-menu-size:17px; //側選單大小
+$aside-header-color: #333; //側選單標題
+$aside-menu-link:#3d3d3d; //側選單連結
+$aside-menu-hover:#4c449c; //側選單hover
+
+
+//整站分頁 | include/_normal.scss
+$pagination-size: 18px;
+$pagination-link-color:#9FA0A0;
+$pagination-link-bg:#fff;
+$pagination-hover-color:$primary;
+$pagination-hover-bg: $primary;
+$pagination-disabled-color:#d4d4d4;
+$pagination-disabled-bg:#fff;
+
+
+//整站more | component/include/_btn.scss
+$btn-more-link-size:var(--btn__size);
+$btn-more-link-color: $primary;
+$btn-more-hover-color: $primary;
+$btn-more-disabled-color: rgba($primary, .6);
+
+
+//search btn | component/include/_btn.scss
+$btn-search-link-color: #006243;
+$btn-search-hover-color:rgba(#006243, .5);
+
+
+//component/include/_btn.scss
+$btn-default-link-color: $default;
+$btn-default-hover-color: darken($default, 10%);
+$btn-default-disabled-color: darken($default, 55%);
+
+
+//component/include/_btn.scss
+$btn-primary-link-color: $primary;
+$btn-primary-hover-color: $primary2;
+$btn-primary-disabled-color: rgba($primary2, .6);
+
+
+//component/include/_btn.scss
+$btn-secondary-link-color: $secondary;
+$btn-secondary-hover-color: $secondary;
+$btn-secondary-disabled-color: rgba($primary, .6);
+
+
+//component/include/_btn.scss
+$btn-success-link-color: $success;
+$btn-success-hover-color: lighten($success, 30%);
+$btn-success-disabled-color: lighten($success, 50%);
+
+//component/include/_btn.scss
+$btn-info-link-color: $info;
+$btn-info-hover-color: lighten($info, 20%);
+$btn-info-disabled-color: lighten($info, 30%);
+
+
+//預設隱藏 若有需要請 '.btn-back ' | 打開註解 include/_nornal.scss 
+$btn-back-link-color: $main-color;
+$btn-back-hover-color: $primary;
+
+
+//預設隱藏 若有需要請於_btn.scss '.b-btn-submit ' 打開註解 | include/_nornal.scss  
+$btn-submit-link-color: #006243;
+$btn-submit-hover-color:#333;
+$btn-submit-disabled-color:#D3D3D4;
+
+
+//詢價列表 Cart, table | include/_nornal.scss  
+$table-th-color: $main-color;
+$table-td-line-color: $default;
+$table-td-color: lighten($main-color, 15%);
+$table-responsive-header-size: 16px;
+$table-responsive-header-color: $main-color;
+$table-hover-bg:#f5f5f5;
+
+
+//詢價車樣式 table | include/_nornal.scss  
+$cart-product-model-size: 15px;
+$cart-product-model-color: #666;
+$cart-product-name-size: 18px;
+$cart-product-name-color:#333;
+
+
+//alert樣式 
+$alert-border-radius:0;
+$alert-border-width:1px;
+
+
+//表單樣式 form | include/_form.scss  
+$input-color:$default;
+$input-focus-color: darken($default, 10%);
+$input-placeholder:rgb(219, 219, 219);
+
+
+//footer | component/include/_footer.scss  
+$footer-size:18px; // Rwd 於 _mixin.scss 調整
+$footer-bg:#006243;
+$footer-bottom-bg:#006243;
+$footer-color:#fff;
+$footer-hover-color: rgba(#fff, .7);
+$footer-line-color: #ccc;
+$footer-link-color: #fff;
+$footer-submenu-link-color:#fff;
+$footer-submenu-hover-color:#fff;
+
+
+//字體樣式 | include/_normal.scss 
+$default-font-family: Urbanist,
+"微軟正黑體",
+"Microsoft JhengHei",
+\5FAE\8EDF\6B63\9ED1\9AD4,
+"微软雅黑",
+'Arial',
+sans-serif;

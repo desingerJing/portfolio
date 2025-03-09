@@ -1,0 +1,689 @@
+@import "include/animation";
+@import "include/rwd";
+@import "include/mixin";
+
+@import "settings/settings"; // 動態變數
+@import "include/variables"; // 變數
+
+//組件
+@import "include/fonts";
+@import "hamburgers/hamburgers";
+@import "component/component";
+@import "pretty-checkbox/_pretty-checkbox"; // checkbox https://lokesh-coder.github.io/pretty-checkbox/
+
+@import "include/normal";
+
+img {
+	max-width: 100%;
+}
+
+.wrap {
+	max-width: $wrap-size;
+	padding: 0 50px;
+	margin: 0 auto;
+	@include mobile-xl {
+		padding: 0 30px;
+	}
+}
+
+section {
+	padding: 50px 0;
+	@include laptop-s {
+		padding: 30px 0;
+	}
+	@include mobile-xl {
+		padding: 20px 0;
+	}
+}
+
+.container > .wrap {
+	padding: 0 5px;
+}
+
+.full-container {
+	margin: 0 calc((100% - 100vw) / 2);
+}
+
+.inner-section {
+	padding: 40px 0;
+	@include laptop-s {
+		padding: 25px 0;
+	}
+}
+
+h1 {
+	font-size: 58px;
+	font-weight: 500;
+	margin-bottom: 30px;
+	@include laptop-s {
+		font-size: 52px;
+		margin-bottom: 26px;
+	}
+	@include tablet {
+		font-size: 48px;
+		margin-bottom: 20px;
+	}
+	@include tablet {
+		font-size: 40px;
+		margin-bottom: 15px;
+	}
+	@include mobile-l {
+		font-size: 36px;
+	}
+}
+
+h3 {
+	font-size: 48px;
+	font-weight: 500;
+	margin-bottom: 40px;
+	@include laptop-s {
+		font-size: 42px;
+		margin-bottom: 28px;
+	}
+	@include tablet {
+		font-size: 38px;
+		margin-bottom: 20px;
+	}
+	@include mobile-l {
+		font-size: 34px;
+	}
+	span {
+		color: $primary;
+	}
+}
+
+h2 {
+	font-size: 36px;
+	font-weight: 500;
+	@include tablet {
+		font-size: 34px;
+	}
+	@include mobile-l {
+		font-size: 30px;
+	}
+
+	&.title-line {
+		padding-bottom: 20px;
+		border-bottom: 1px solid $default;
+		position: relative;
+		&::before {
+			content: "";
+			width: 115px;
+			height: 5px;
+			background-color: $primary;
+			position: absolute;
+			bottom: -1px;
+			left: 50%;
+			transform: translateX(-50%);
+		}
+	}
+}
+
+h4 {
+	color: $primary;
+	font-size: 24px;
+	font-weight: 700;
+	margin-bottom: 12px;
+	@include mobile-l {
+		font-size: 20px;
+	}
+}
+
+h5 {
+	font-size: 18px;
+	@include mobile-xl {
+		font-size: 16px;
+	}
+}
+
+ul.red-dot {
+	list-style: none;
+	padding-left: 0;
+	margin-bottom: 0;
+	margin-top: -4px;
+	@include mobile-xl {
+		margin-top: -15px;
+	}
+	> li {
+		padding-left: 16px;
+		margin-top: 4px;
+		position: relative;
+		@include mobile-xl {
+			margin-top: 15px;
+		}
+		&::before {
+			content: "";
+			display: inline-block;
+			width: 6px;
+			height: 6px;
+			background-color: $primary;
+			// border-radius: 6px;
+			position: absolute;
+			top: 10px;
+			left: 0;
+		}
+	}
+
+	&.text-center {
+		>li {
+			padding-left: 0;
+			&::before {
+				position: static;
+				margin-right: 14px;
+				margin-bottom: 3px;
+			}
+		}
+	}
+}
+
+
+
+#container {
+	margin-top: 82px;
+}
+
+.splide {
+
+	.splide__arrow {
+		width: 50px;
+		height: 50px;
+		background-color: transparent;
+		border: 1px solid $primary;
+		position: relative;
+		left: auto;
+		right: auto;
+		top: auto;
+		transform: none;
+		transition: ease .2s;
+		@include mobile-xl {
+			width: 46px;
+			height: 46px;
+		}
+
+		&:hover {
+			background-color: $primary;
+
+			&::before {
+				border-color: #fff;
+			}
+		}
+
+		&::before {
+			content: "";
+			width: 12px;
+			height: 12px;
+			border-top: 2px solid $primary;
+			border-left: 2px solid $primary;
+			transition: ease .2s;
+
+			position: absolute;
+			transform: rotate(-45deg);
+			margin-left: 5px;
+			@include mobile-xl {
+				width: 10px;
+				height: 10px;
+			}
+		}
+
+		&--next {
+			margin-left: 24px;
+			@include mobile-xl {
+				margin-left: 20px;
+			}
+
+			&::before {
+				transform: rotate(135deg);
+				margin-left: 0;
+				margin-right: 5px;
+			}
+		}
+
+		svg {
+			display: none;
+		}
+	}
+
+	.splide__pagination__page {
+		width: 10px;
+		height: 10px;
+		background-color: #7D7D7D;
+
+		&.is-active {
+			background-color: $primary;
+			opacity: 1;
+			transform: none;
+		}
+	}
+}
+
+
+//  header
+.leave_top {
+
+	header {
+		padding: 7px 0;
+	}
+	.logo {
+		width: 90px;
+	}
+
+	.main-menu ul {
+		margin-top: 5px;
+	}
+
+	.main-menu a {
+		// font-size: 18px;
+		padding: 5px 14px;
+	}
+}
+
+header {
+	width: 100%;
+	padding: 8px 0;
+	background: #fff;
+	border-bottom: 1px solid $primary;
+	box-shadow: 0 3px 10px 0px rgba(0, 0, 0, 0.1);
+	position: fixed;
+	left: 0;
+	right: 0;
+	z-index: 5;
+	top: 0;
+	@include tablet {
+		padding: 8px 0;
+	}
+
+	>.wrap {
+		display: flex;
+		// justify-content: space-between;
+	}
+
+	.main-menu {
+		margin: 0 auto;
+
+		@include tablet {
+			display: none;
+		}
+	}
+	
+}
+
+.logo {
+	width: 120px;
+	transition: ease .2s;
+	@include mobile-xl {
+		width: 90px;
+	}
+}
+
+.main-menu {
+
+	ul {
+		@include clearul;
+		display: flex;
+		border-bottom: none;
+		margin: 10px -25px 0;
+	}
+	a {
+		display: block;
+		color: $main-color;
+		font-size: 20px;
+		// font-weight: bold;
+		border: none;
+		background-color: transparent;
+		padding: 10px 18px;
+		transition: ease .2s;
+		@include laptop-s {
+			font-size: 18px;
+			padding: 10px 15px;
+		}
+		&:hover,
+		&.active {
+			color: $primary;
+			background-color: transparent;
+		}
+	}
+}
+
+
+//banner 
+banner,
+banner-item,
+splide {
+	display: block;
+	position: relative;
+}
+
+// case
+.case {
+	padding: clamp(50px, 8.3vw, 100px) 0 !important;
+	background: #f6f6f6;
+	background: linear-gradient(0deg, rgb(246, 246, 246) 0%, rgba(255, 255, 255, 0) 30%, rgba(255, 255, 255, 0) 70%, rgb(246, 246, 246) 100%);
+
+	.row {
+		margin-top: -40px;
+		@include tablet {
+			margin-top: -35px;
+		}
+		@include tablet {
+			margin-top: -25px;
+		}
+	}
+
+	.col {
+		padding: 0 12px;
+		margin-top: 40px;
+		position: relative;
+		@include tablet {
+			margin-top: 35px;
+		}
+		@include mobile-l {
+			margin-top: 25px;
+		}
+	}
+}
+
+.case-pic {
+	position: relative;
+
+	&:hover {
+		
+		&::after {
+			opacity: .4;
+		}
+	}
+
+	&::after {
+		content: "";
+		background: rgba(12, 0, 0, .32);
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		pointer-events: none;
+		transition: ease .4s;
+	}
+
+	&::before {
+		content: "";
+		width: 10px;
+		height: 38%;
+		background-color: $primary;
+		position: absolute;
+		top: 0;
+		left: 0;
+		transform: translateX(-100%);
+	}
+}
+
+.case-title {
+	font-size: 20px;
+	margin-top: 9px;
+	@include mobile-xl {
+		font-size: 18px;
+	}
+}
+
+.case-show {
+	width: 1200px;
+	margin: 0 auto;
+
+	.wrap {
+		padding: 90px;
+		background: #fff;
+	}
+
+	.red-dot li+li {
+		margin-top: 16px;
+	}
+
+	.mfp-close {
+		width: 70px;
+		height: 70px;
+		font-size: 40px;
+		color: transparent;
+		background: $primary2;
+		opacity: 1;
+		transition: ease .4s;
+		&::before,
+		&::after {
+			content: "";
+			width: 1px;
+			height: 30px;
+			background: #fff;
+			position: absolute;
+			top: 50%;
+			left: 50%;
+		}
+		&::before {
+			transform: translate(-50%, -50%) rotate(45deg);
+		}
+		&::after {
+			transform: translate(-50%, -50%) rotate(-45deg);
+		}
+		&:hover {
+			background: $primary;
+		}
+	}
+}
+
+
+// about
+.about {
+	padding-top: 0;
+	margin: 50px 0;
+	@include mobile-xl {
+		margin: 0;
+	}
+
+	.col {
+
+		@include tablet {
+			width: 100%;
+		}
+	}
+}
+
+
+.about-img {
+	position: relative;
+	padding-top: 14px;
+	padding-right: 14px;
+	margin-top: clamp(40px, 5.8vw, 70px);
+	@include mobile-xl {
+		margin-top: 10px;
+	}
+	&::before {
+		content:"";
+		background: $primary;
+		width: 30%;
+		height: 50%;
+		position: absolute;
+		top: 0;
+		right: 0;
+		z-index: -1;
+	}
+}
+
+.about-img-content {
+	position: sticky;
+	top: 0;
+	z-index: 2;
+	@include tablet {
+		width: 40%;
+	}
+	@include mobile-xl {
+		position: static;
+		width: 320px;
+		margin: 0 auto;
+	}
+}
+
+.about-description {
+	padding: clamp(40px, 5.8vw, 70px) 0;
+	padding-right: 14%;
+	@include mobile-xl {
+		padding-right: 0;
+	}
+
+	.col+.col {
+
+		@include tablet {
+			margin-top: clamp(30px, 4.16vw, 50px);
+		}
+	}
+
+	&.description-bg {
+		position: relative;
+		overflow: visible;
+		
+		&::before {
+			content: "";
+			background: rgb(246, 246, 246);
+			background: linear-gradient(0deg, rgba(246, 246, 246, 1) 0%, rgba(255, 255, 255, 0) 30%, rgba(255, 255, 255, 0) 70%, rgba(246, 246, 246, 1) 100%);
+			width: calc(100vw - 10px);
+			position: absolute;
+			top: 0;
+			left: 0;
+			bottom: 0;
+			transform: translateX(calc(($wrap-size - 100px - 100vw) / 2));
+			z-index: -1;
+
+			@include wrap-width {
+				transform: translateX(-55px);
+			}
+			@include mobile-xl {
+				width: auto;
+				right: -30px;
+				left: -30px;
+				top: -120px;
+				transform: none;
+			}
+		}
+	}
+
+	ul+h4 {
+		margin-top: clamp(30px, 4.16vw, 50px);
+	}
+
+	h2 {
+		margin-bottom: 28px;
+
+		// @include tablet {
+		// 	margin-bottom: 10px;
+		// }
+	}
+}
+
+
+footer {	
+	padding-top: 16px;
+	padding-bottom: 16px;
+	background-color: $primary2;
+	// @include mobile-xl {
+	// 	padding-top: 40px;
+	// }
+	
+}
+
+
+.footer-bottom {
+	display: flex;
+	justify-content: space-between;
+
+	color: #7D7D7D;
+	font-size: 16px;
+	@include mobile-xl {
+		font-size: 14px;
+	}
+	@include mobile-ll {
+		display: block;
+	}
+	a {
+		color: #7D7D7D;
+		font-size: 16px;
+		@include mobile-xl {
+			font-size: 14px;
+		}
+		&:hover {
+			color: $primary;
+		}
+	}
+}
+
+.design-info > ul{
+	display: flex;
+	flex-wrap: wrap;
+	list-style: none;
+	padding-left: 0;
+	margin-bottom: 0;
+
+	li + li {
+		padding-left: 20px;
+		position: relative;
+		@include mobile-xl {
+			padding-left: 14px;
+		}
+		&::before {
+			content: "";
+			width: 1px;
+			height: 15px;
+			background-color: $default;
+			position: absolute;
+			top: 5px;
+			left: 10px;
+			@include mobile-xl {
+				height: 13px;
+				left: 7px;
+			}
+		}
+	}
+}
+
+.design-info {
+	display: flex;
+	color: $default;
+	> ul {
+		padding-left: 7px;
+	}
+}
+
+.footer-copyright {
+	font-size: 16px;
+	padding: 15px 0;
+	@include tablet {
+		padding: 10px 0;
+	}
+	@include mobile-xl {
+		font-size: 14px;
+	}
+}
+
+
+// scroller
+.scroller {
+	background: url('../images/scroller_btn.svg') top left no-repeat;
+	background-size: 65px;
+	padding-top: 45px;
+}
+
+.scroller::-webkit-scrollbar {
+	height: 10px;
+	background-color: $danger;
+}
+
+/* Track */
+.scroller::-webkit-scrollbar-track {
+	-webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+	//border-radius: 10px;
+	background-color: #f5f5f58a;
+}
+
+/* Handle */
+.scroller::-webkit-scrollbar-thumb {
+	border-radius: 3px;
+	-webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, .3);
+	background-color: $hover-color;
+	background-image: -webkit-linear-gradient(45deg, rgba(255, 255, 255, 0.2) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.2) 50%, rgba(255, 255, 255, 0.2) 75%, transparent 75%, transparent);
+}
+

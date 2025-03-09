@@ -1,0 +1,361 @@
+$has-no-feedback-color: #868784 !default;
+$has-no-feedback-border-color: #D2D3D1 !default;
+$has-error-color: $danger !default;
+$has-success-color: $success !default;
+$has-warning-color: $danger !default;
+
+/* for 辨識碼 */
+
+.input-group_captcha-code {
+    .input-group-addon {
+        padding: 0;
+        cursor: pointer;
+
+        i {
+            font-size: 20px;
+            vertical-align: middle;
+            padding: 0 5px;
+        }
+    }
+}
+
+
+/* 取消chrome自動完成的底色*/
+
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:active {
+    -webkit-box-shadow: 0 0 0 30px #fff inset !important;
+}
+
+.form-validator {
+    .has-feedback .form-control {
+        padding-right: 12px; //bootstrap default value
+    }
+
+    .help-block {
+        &.with-errors {
+            display: none;
+        }
+
+        ul {
+            margin: 0;
+        }
+    }
+
+    .textarea_feedback {
+        text-align: right;
+        font-size: 14px;
+        position: relative;
+        margin-top: -22px;
+        margin-right: 10px;
+        pointer-events: none;
+        // color: $has-no-feedback-color;
+    }
+
+    label {
+        // min-height: 22px;
+    }
+
+    .has-child {
+        .is-child {
+            margin-bottom: 0;
+        }
+
+        .row+.row {
+            margin-top: 15px;
+        }
+
+        div[class*='col-sm']+div[class*='col-sm'] {
+            .is-child {
+                @include mobile-xl {
+                    margin-top: 15px;
+                }
+            }
+        }
+
+        // div[class*='col-xs']{
+        //     .is-child{
+        //         @include mobile-xl{
+        //             margin-bottom: 15px;
+        //         }            
+        //     }
+        // }    
+    }
+
+    .has-error,
+    .has-group-error {
+        .help-block {
+            display: none;
+        }
+
+        >.help-block.with-errors,
+        .checkbox>.help-block.with-errors {
+            display: block;
+        }
+
+        >label,
+        >.help-block {
+            color: $has-error-color;
+        }
+
+        >.form-control,
+        >.input-group>.form-control,
+        >.input-group>.input-group-addon {
+            border-color: $has-error-color;
+        }
+
+        >label:after {
+            content: "\f00d";
+            position: absolute;
+            top: -1px;
+            display: inline-block;
+            font-family: 'Fontawesome';
+            font-style: normal;
+            font-weight: 400;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+            margin-left: 6px;
+            color: $has-error-color;
+        }
+    }
+
+    .has-success,
+    .has-group-success {
+        .help-block {
+            display: none;
+        }
+
+        >label,
+        >.help-block {
+            color: $has-success-color;
+        }
+
+        // >.form-control,
+        // >.input-group>.form-control,
+        // >.input-group>.input-group-addon {
+        //     border-color: $has-success-color;
+        // }
+
+        >label:after {
+            content: "\f00c";
+            position: absolute;
+            top: -1px;
+            display: inline-block;
+            font-family: 'FontAwesome';
+            font-style: normal;
+            font-weight: 400;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+            color: $has-success-color;
+            margin-left: 6px;
+        }
+    }
+
+    .has-warning {
+
+        label,
+        .help-block {
+            color: $has-warning-color;
+        }
+
+        // .form-control {
+        //     border-color: $has-warning-color;
+        // }
+
+        label:after {
+            content: "\0021";
+            position: relative;
+            top: 1px;
+            display: inline-block;
+            font-family: 'FontAwesome';
+            font-style: normal;
+            font-weight: 400;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+            font-size: 14px;
+            margin-left: 6px;
+            color: $has-warning-color;
+        }
+    }
+}
+
+.form-validator--label-effect {
+    .form-group {
+        margin-top: 50px;
+        margin-bottom: 30px;
+
+        >label {
+            transition: all 0.2s ease;
+            position: absolute;
+            top: -24px;
+            left: 0;
+            font-size: 80%;
+            display: block;
+            pointer-events: none;
+        }
+    }
+
+    .has-child {
+        .is-child {
+            margin-top: 0;
+        }
+    }
+
+    .is-checkbox.no-label {
+        margin-top: 0px;
+        margin-bottom: 20px;
+    }
+
+    .is-textinput,
+    .is-textarea,
+    .is-select,
+    .has-child {
+        >label {
+            z-index: 3;
+            top: 8px;
+            left: 10px;
+            font-size: 100%;
+        }
+
+        &.is-focus,
+        &.is-filled,
+        &.has-child-label {
+            >label {
+                top: -24px;
+                left: 0;
+                font-size: 80%;
+            }
+        }
+    }
+
+    .is-select {
+        >select {
+            color: transparent;
+        }
+
+        &.is-focus,
+        &.is-filled {
+            >select {
+                color: inherit;
+            }
+        }
+    }
+
+    .is-textinput,
+    .is-textarea {
+        ::-webkit-input-placeholder {
+            color: transparent;
+        }
+
+        :-ms-input-placeholder {
+            color: transparent;
+        }
+
+        ::placeholder {
+            color: transparent;
+        }
+
+        &.is-focus,
+        &.is-filled {
+            ::-webkit-input-placeholder {
+                color: inherit;
+            }
+
+            :-ms-input-placeholder {
+                color: inherit;
+            }
+
+            ::placeholder {
+                color: inherit;
+            }
+        }
+    }
+
+    .has-child-label {
+
+        &.is-focus,
+        &.is-filled {
+            >label {
+                opacity: 0;
+            }
+        }
+    }
+}
+
+.form-validator--help-effect {
+    @media (min-width:768px) {
+        padding-right: 300px;
+
+        .help-block {
+            position: absolute;
+            left: 100%;
+            top: 50%;
+            transform: translateY(-50%);
+            margin-left: 20px;
+            width: auto;
+            min-width: 180px;
+            max-width: 280px;
+            background-color: lighten($color: $has-no-feedback-border-color, $amount: 10);
+            color: $has-no-feedback-color;
+            border-radius: 4px;
+            padding: 2px 10px;
+            margin-bottom: 0;
+
+            &:before {
+                width: 0;
+                height: 0;
+                border-style: solid;
+                border-width: 4px 8px 4px 0;
+                border-color: transparent lighten($color: $has-no-feedback-border-color, $amount: 10) transparent transparent;
+                content: '';
+                position: absolute;
+                right: 100%;
+                top: 50%;
+                transform: translateY(-50%);
+            }
+
+            .help-block__text,
+            .list-unstyled li {
+                overflow: hidden;
+                text-overflow: ellipsis;
+                white-space: nowrap;
+            }
+        }
+
+        .help-block.is-normal {
+            display: none;
+        }
+
+        .is-focus {
+            >.help-block.is-normal {
+                display: block;
+            }
+
+            &.has-success,
+            &.has-group-success {
+                >.help-block.is-normal {
+                    display: none;
+                }
+            }
+        }
+
+        .has-error,
+        .has-group-error {
+            >.help-block.with-errors {
+                background: $has-error-color;
+                color: #fff;
+
+                &:before {
+                    border-color: transparent $has-error-color transparent transparent;
+                }
+
+            }
+        }
+
+    }
+
+
+
+}
